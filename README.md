@@ -16,16 +16,20 @@ This project utilizes the XGBoost algorithm to build a robust model capable of d
 5. **Evaluation**: The Area Under the Precision-Recall Curve (AUPRC) is used to evaluate the model's performance due to the imbalanced nature of the dataset. The precision-recall curve is plotted, and the classification report is generated to understand the model's efficacy in detecting fraud.
 
 ## Libraries Used
+**Python**: 3.10.15
 - **Numpy**: For numerical operations.
 - **Pandas**: For data manipulation and analysis.
 - **Matplotlib**: For plotting graphs and visualizations.
 - **Scikit-learn**: For data preprocessing, metrics, and sampling techniques (e.g., SMOTE, IsolationForest).
 - **Imbalanced-learn**: For handling class imbalance using SMOTE.
-- **XGBoost**: To train a highly efficient gradient boosting model for fraud detection.
+- [**XGBoost**](https://xgboost.readthedocs.io/en/stable/): To train a highly efficient gradient boosting model for fraud detection.
+
+
 
 ## Results
-The model was tuned using a grid search over important hyperparameters. The best model achieved an AUPRC score of `X.XXXX`. Below are key metrics of the model:
-- **Best Parameters**: Hyperparameters such as `n_estimators`, `max_depth`, `learning_rate`, etc., were tuned to optimize the performance.
+The model was tuned using a grid search over important hyperparameters. The best model achieved an AUPRC score of `0.8754`. Below are key metrics of the model:
+- **Best Parameters**: Hyperparameters, were tuned to optimize the performance. 
+Best Parameters: {`n_estimators: 50`, `max_depth: 7`, `learning_rate: 0.2`, `subsample: 0.9`, `colsample_bytree: 1.0`, `scale_pos_weight: 10`}
 - **Precision-Recall Curve**: The precision-recall curve was plotted for the best model to visualize the performance in identifying fraudulent transactions.
 - **Classification Report**: The classification report includes precision, recall, and F1-score for both the majority and minority classes, showing how well the model performed in fraud detection.
 
